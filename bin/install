@@ -33,7 +33,7 @@ install() {
 
 	echo "Downloading certstrap from ${download_url}"
 	cd "${bin_install_path}"
-	curl -sL "$download_url" -o certstrap
+	curl -sL "$download_url" -o certstrap && chmod +x certstrap
 }
 
 install "$ASDF_INSTALL_TYPE" "$ASDF_INSTALL_VERSION" "$ASDF_INSTALL_PATH"
